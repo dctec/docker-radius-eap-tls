@@ -1,8 +1,9 @@
 FROM alpine:3.6
 
-RUN apk add --no-cache --upgrade openssl tar && \
+RUN apk add --no-cache --upgrade tar ca-certificates openssl wget tar && \
     addgroup -g 101 radius && \
-    adduser -u 100 -D -G radius radius
+    adduser -u 100 -D -G radius radius &&\
+    update-ca-certificates
 
 WORKDIR /easyrsa
 COPY entrypoint.sh .
