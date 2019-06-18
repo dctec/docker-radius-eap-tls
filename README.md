@@ -30,7 +30,7 @@ The following environment variables are used:
 
 # Simple setup
 
-Running the following will create each file not already present in the volume, prompting for input where required and leaving things in the [default](#configuration) locations:
+Running the following will create each file not already present in the volume (i.e., /var/lib/docker/volumes/pki/_data), prompting for input where required and leaving things in the [default](#configuration) locations:
 - CA certificate and key
 - DH parameters
 - Server certificate and key
